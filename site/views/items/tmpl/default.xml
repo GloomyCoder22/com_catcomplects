@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="Комплектующие" option="View">
+    <message>
+      <![CDATA[COM_CATCOMPLECTS_TITLE_ITEM_VIEW_ITEM_DESC]]>
+    </message>
+  </layout>
+  <fields name="params">
+    <fieldset name="request" label="COM_CATCOMPLECTS_FIELDSET_ITEM_ID_SELECT_LABEL">
+      <field name="cat_id" label="Категория товаров" 
+        query="SELECT `id`,`name` FROM #__catcomplects_items_categories ORDER BY `name`"
+        type="sql" 
+        key_field="id" 
+        value_field="name" 
+        description="JGLOBAL_SHOW_TITLE_DESC"
+        default="0">
+        <option value="0">Все</option>
+      </field>
+    </fieldset>
+  </fields>
+</metadata>

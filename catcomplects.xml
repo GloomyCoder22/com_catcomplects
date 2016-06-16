@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+  <name>com_catcomplects</name>
+  <creationDate>2015-09-14</creationDate>
+  <copyright>© 2015. Demin Artem. Все права защищены.</copyright>
+  <license>GNU General Public License версии 2 или более поздней; Смотрите LICENSE.txt</license>
+  <author>Demin Artem</author>
+  <authorEmail>ademin1982@yandex.ru</authorEmail>
+  <authorUrl>http://</authorUrl>
+  <version>2.2.0</version>
+  <description>Компонент для Joomla 3.* - Каталог товаров для наружной рекламы с корзиной и возможностью заказа.</description>
+
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+  
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+  
+  <files folder="site">
+    <filename>index.html</filename>
+    <filename>catcomplects.php</filename>
+    <filename>controller.php</filename>
+    <filename>router.php</filename>
+    <folder>views</folder>
+    <folder>models</folder>
+    <folder>controllers</folder>
+    <folder>helpers</folder>
+    <folder>assets</folder>
+  </files>
+  <languages folder="languages/site">
+    <language tag="en-GB">en-GB/en-GB.com_catcomplects.ini</language>
+    <language tag="ru-RU">ru-RU/ru-RU.com_catcomplects.ini</language>
+  </languages>
+  
+  <administration>
+    <menu img="components/com_catcomplects/assets/images/s_com_catcomplects.png" >COM_CATCOMPLECTS</menu>
+    <submenu>
+      <menu link="option=com_catcomplects&amp;view=categories" view="categories" img="components/com_catcomplects/assets/images/s_categories.png" alt="Catcomplects/Categories">COM_CATCOMPLECTS_TITLE_CATEGORIES</menu>
+      <menu link="option=com_catcomplects&amp;view=complects" view="complects" img="components/com_catcomplects/assets/images/s_complects.png" alt="Catcomplects/Complects">COM_CATCOMPLECTS_TITLE_COMPLECTS</menu>
+      <menu link="option=com_catcomplects&amp;view=items" view="items" img="components/com_catcomplects/assets/images/s_items.png" alt="Catcomplects/Items">COM_CATCOMPLECTS_TITLE_ITEMS</menu>
+      <menu link="option=com_catcomplects&amp;view=itemcats" view="itemcats" img="components/com_catcomplects/assets/images/s_items.png" alt="Catcomplects/Itemcats">Категории товаров</menu>
+    </submenu>
+    <files folder="administrator">
+      <filename>access.xml</filename>
+      <filename>config.xml</filename>
+      <filename>controller.php</filename>
+      <filename>index.html</filename>
+      <filename>catcomplects.php</filename>
+      <folder>controllers</folder>
+      <folder>assets</folder>
+      <folder>helpers</folder>
+      <folder>models</folder>
+      <folder>sql</folder>
+      <folder>tables</folder>
+      <folder>views</folder>
+    </files>
+    <languages folder="languages/administrator">
+      <language tag="en-GB">en-GB/en-GB.com_catcomplects.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_catcomplects.sys.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_catcomplects.ini</language>
+			<language tag="ru-RU">ru-RU/ru-RU.com_catcomplects.sys.ini</language>
+    </languages>
+  </administration>
+  
+  <plugins>
+    <plugin group="search" plugin="catcomplects"/>
+  </plugins>
+    
+</extension>

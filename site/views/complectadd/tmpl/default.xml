@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+  <layout title="COM_CATCOMPLECTS_TITLE_ADD_VIEW_COMPLECT" option="View">
+    <message>
+      <![CDATA[COM_CATCOMPLECTS_TITLE_ADD_VIEW_COMPLECT_DESC]]>
+    </message>
+  </layout>
+  <fields name="params">
+    <fieldset name="request" label="COM_CATCOMPLECTS_FIELDSET_ITEM_ID_SELECT_LABEL">
+      <field name="cmpl_id" label="COM_CATCOMPLECTS_ITEM_ID_SELECT_LABEL" 
+        query="SELECT `id`,`name` FROM #__catcomplects_complects ORDER BY `name`"
+        type="sql" 
+        key_field="id" 
+        value_field="name" 
+        default="0"
+        require="true" 
+        description="JGLOBAL_SHOW_TITLE_DESC">
+        <option value="0">Нет</option>
+      </field>
+    </fieldset>
+  </fields>    
+</metadata>

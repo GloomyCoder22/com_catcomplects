@@ -1,0 +1,24 @@
+.icon-48-categories {
+      background-image: url(../images/l_categories.png);
+      padding-left:60px!important;
+}
+
+.icon-48-category {
+      background-image: url(../images/l_categories.png);
+      padding-left:60px!important;
+}
+
+.inputbox_items {
+  width: 700px;
+}
+#jform_items_econom_chzn li, #jform_items_standart_chzn li, #jform_items_premium_chzn li {
+  float: none;
+}
+
+#jform_name, #jform_catid_chzn {width: 450px !important;}
+
+.inp_description {
+  margin: 0px; 
+  width: 380px; 
+  height: 101px;
+}
